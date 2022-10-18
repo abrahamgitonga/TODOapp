@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8773b47828.js" crossorigin="anonymous"></script>
+    <title>TODO APP</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">
+            TODO <span>APP</span>
+        </h1>
+    </div>
+    <div class="wrapper">
+        <div class="task_input">
+            <input type="text" placeholder="Add a Task">
+            <input type="date" id="dateInput">
+            <input type="time" id="timeInput">
+            <input type="text" id="description" placeholder="description">
+            
+
+        </div>
+        <div class="control-bar">
+            <div class="filter-bar">
+                <span id="all" class="active">All Tasks</span>
+                <span id="completed">Completed</span>
+                <span id="pending">Uncompleted</span>
+               
+
+            </div>
+            <button class="clear-btn">Clear</button>
+        </div>
+        <ul class="task_box"></ul>
+                 
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

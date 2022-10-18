@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: hsl(226, 43%, 10%);
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.container{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    
+}
+.heading{
+    color:aqua;
+   
+}
+h1 span{
+    color: rgb(255, 127, 176);
+}
+
+.wrapper{
+    /* background: hsl(197, 83%, 57%); */
+    background: linear-gradient(#00cc9c, #ff80d3);
+    
+    
+    max-width: 750px;
+    margin: 135px auto;
+    border-radius: 10px;
+    padding:28px 0;
+    
+}
+.task_input{
+    height: 50px;
+    padding: 0 25px;
+    position: relative;
+    display: flex;
+    
+}
+#dateInput{
+    font-size: 10px;
+    
+}
+#timeInput{
+    font-size: 10px;
+
+}
+.task_input input{
+    
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 0 20px 0 50px;
+    border: 1px solid #999;
+    outline: none;
+   
+}
+.task_input input::placeholder{
+    color: #bfbfbf;
+}
+.control-bar, li{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    
+}
+.control-bar{
+    padding: 18px 25px;
+    /* padding: 30px 35px; */
+    border-bottom: 1px solid #ccc;
+    
+}
+.filter-bar span{
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 15px;
+}
+.filter-bar span:first-child{
+    margin: 0;
+}
+.filter-bar span.active{
+    color: rgb(247, 205, 129);
+}
+.control-bar .clear-btn{
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 7px 13px;
+    /* padding: 10px 16px; */
+    background: rgba(233, 144, 245, 0.959);
+
+}
+
+.task_box{
+    margin: 20px 25px;
+
+}
+.task_box .task{
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+
+
+}
+.task_box .task:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+
+}
+.task label{
+    display: flex;
+}
+.task label p.checked{
+    text-decoration: line-through;
+}
+.task label input{
+    margin-top: 6px;
+    margin-right: 12px;
+}
+.task .settings{
+    cursor: pointer;
+    position: relative;
+}
+.settings .task_menu{
+    background: #fff;
+    box-shadow: 0 0 6px rgb(0,0,0,0.15);
+    padding: 5px 0;
+    position: absolute;
+    border-radius: 5px;
+    right: -5px;
+    bottom: -65px;
+    z-index: 2;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: 0.3s ease;
+}
+.settings:hover .task_menu.show{
+    transform: scale(1);
+}
+.task_menu li{
+    height: 25px;
+    padding: 17px 15px;
+    font-size: 15px;
+    margin-bottom: 2px;
+    justify-content: flex-start;   
+}
+.task_menu li:last-child{
+    margin-bottom: 0;
+}
+.task_menu li:hover{
+    background: #f5f5f5;
+}
+.task_menu li i{
+    padding-right: 8px;
+}
+
+.task-label {
+    width: 90%;
+    /* border: 2px solid; */
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    /* gap: 10px; */
+}
+
+@media (max-width : 300px){
+    body{
+        padding: 0 10px;
+    }
+    .wrapper{
+        padding: 20px 0;
+    }
+    .filter-bar span{
+        margin: 0 5px;
+    }
+    .task_input{
+        padding: 0 20px;
+    }
+    .control-bar{
+        padding: 18px 20px;
+    }
+    .task_box{
+        margin-top: 20px;
+        margin-right: 5px;
+        padding: 0 15px 10px 20px;
+    }
+    .task label input{
+        margin-top: 5px;
+    }
+}
